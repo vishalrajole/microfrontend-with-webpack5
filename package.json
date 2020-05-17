@@ -5,7 +5,7 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "start": "lerna run --scope @demo/* --parallel start",
+    "start": "concurrently \"lerna run --scope @demo/* --parallel start\"",
     "build": "lerna run --scope @demo/* build",
     "serve": "lerna run --scope @demo/* --parallel serve",
     "clean": "lerna run --scope @demo/* --parallel clean"
@@ -14,6 +14,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "concurrently": "^5.2.0",
     "lerna": "^3.21.0"
   }
 }

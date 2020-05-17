@@ -7,6 +7,6 @@ const StyledButton = styled.button`
   padding: 8px 20px;
 `;
 
-const Button = () => <StyledButton>&#128133; Button</StyledButton>;
+const Button = () => <StyledButton>&#128133; Button2</StyledButton>;
 
 export default Button;

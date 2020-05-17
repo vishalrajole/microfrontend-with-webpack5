@@ -5,7 +5,9 @@ const path = require("path");
 
 module.exports = {
   entry: "./src/index",
+  cache: false,
   mode: "development",
+  devtool: "source-map",
   devServer: {
     contentBase: path.join(__dirname, "dist"),
     port: 3001,
@@ -33,8 +35,11 @@ module.exports = {
       remotes: {
         app2: "app2",
       },
+      exposes: {
+        App1Button: "./src/Button",
+      },
       // app2 is expecting "styled-components" shared dependency
-      shared: ["react", "react-dom"],
+      shared: ["react", "react-dom", "redux"],
     }),
     new HtmlWebpackPlugin({
       template: "./public/index.html",

@@ -5,7 +5,9 @@ const path = require("path");
 
 module.exports = {
   entry: "./src/index",
+  cache: false,
   mode: "development",
+  devtool: "source-map",
   devServer: {
     contentBase: path.join(__dirname, "dist"),
     port: 3002,
@@ -34,7 +36,7 @@ module.exports = {
         app1: "app1",
       },
       exposes: {
-        Button: "./src/Button",
+        App2Button: "./src/Button",
       },
       // app2 is expecting "styled-components" as a shared dependency
       shared: ["react", "react-dom", "styled-components"],
